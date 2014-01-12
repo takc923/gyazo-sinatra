@@ -10,7 +10,7 @@ module Gyazo
     configure do
       set :dbm_path, 'db/id'
       set :image_dir, 'public/images'
-      set :image_url, 'http://localhost:8080/images'
+      set :image_url, 'http://localhost:9292/images'
     end
 
     post '/gyazo' do
