@@ -28,7 +28,7 @@ module Gyazo
       data = request[:data][:tempfile].read
       hash = Digest::MD5.hexdigest(data).to_s
       File.open("/tmp/#{hash}.mp4", 'w'){|f| f.write(data)}
-      ret = system("sh /Users/takc923/Workspace/gyazo-sinatra/convert_mp4togif.sh #{hash}")
+      ret = system("sh convert_mp4togif.sh #{hash}")
 
       "#{options.image_url}/#{hash}.gif"
     end
